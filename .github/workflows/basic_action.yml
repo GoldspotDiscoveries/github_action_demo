@@ -35,3 +35,13 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           ls
+      - name: Setup Python
+        uses: actions/setup-python@v4.1.0
+        with:
+          # Version range or exact version of Python to use, using SemVer's version range syntax. Reads from .python-version if unset.
+          python-version: 3.8
+          
+      - name: Run python script
+        run:
+          python basic_run.py
+    
